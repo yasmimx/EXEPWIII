@@ -120,6 +120,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Aluno\AlunoAreaRegistration.cs" />
+    <Compile Include="Areas\Aluno\Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -140,6 +142,8 @@
     <Content Include="image\enildo.ico" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Aluno\Views\web.config" />
+    <Content Include="Areas\Aluno\Views\Home\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\escola.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -172,7 +176,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Aluno\Data\" />
+    <Folder Include="Areas\Aluno\Views\Shared\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Aluno\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
