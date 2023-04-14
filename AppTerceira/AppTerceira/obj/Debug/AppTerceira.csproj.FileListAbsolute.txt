@@ -1,0 +1,2 @@
+C:\Users\TEMP.BGLAB\Documents\GitHub\EXEPWIII\AppTerceira\AppTerceira\obj\Debug\AppTerceira.csproj.AssemblyReference.cache
+C:\Users\TEMP.BGLAB\Documents\GitHub\EXEPWIII\AppTerceira\AppTerceira\obj\Debug\AppTerceira.csproj.CoreCompileInputs.cache
