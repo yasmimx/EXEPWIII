@@ -11,21 +11,38 @@ namespace AppTerceira.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            Fisica pf = new Fisica()
+            {
+                Id = 2,
+                Nome = "Roberta",
+                Sexo = 'F',
+                CPF = 12345678911,
+                RG = 12345678,
+                Dig_RG = '9'
+            };
+
+            return View(pf);
         }
 
         public ActionResult About()
         {
             Pessoa pessoa = new Pessoa();
             pessoa.Id = 12;
-            return View();
+            pessoa.Nome = "Enildo";
+            pessoa.Sexo = 'M';
+            return View(pessoa);
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            Juridica pj = new Juridica();
 
-            return View();
+            pj.Id = 1001;
+            pj.Nome = "Fabrica de Gênios";
+            pj.Cnpj = 123456789123412;
+            pj.IE = 123456789;
+
+            return View(pj);
         }
     }
 }
