@@ -21,15 +21,29 @@ namespace AppTerceira.Controllers
                 Dig_RG = '9'
             };
 
+            ViewData["Id"] = pf.Id;
+            ViewData["Nome"] = pf.Nome;
+            ViewData["Sexo"] = pf.Sexo;
+            ViewData["CPF"] = pf.CPF;
+            ViewData["RG"] = pf.RG;
+            ViewData["Dig_RG"] = pf.Dig_RG;
+
+
             return View(pf);
         }
 
         public ActionResult About()
         {
             Pessoa pessoa = new Pessoa();
+
             pessoa.Id = 12;
             pessoa.Nome = "Enildo";
             pessoa.Sexo = 'M';
+
+            ViewBag.Id = pessoa.Id;
+            ViewBag.Nome = pessoa.Nome;
+            ViewBag.Sexo = pessoa.Sexo;
+
             return View(pessoa);
         }
 
@@ -43,6 +57,23 @@ namespace AppTerceira.Controllers
             pj.IE = 123456789;
 
             return View(pj);
+        }
+
+        public ActionResult ExemploTempData()
+        {
+            Juridica pj = new Juridica();
+
+            pj.Id = 256;
+            pj.Nome = "Desenvolvedores CIA";
+            pj.Cnpj = 123456789188888;
+            pj.IE = 123456789;
+
+            TempData["Id"] = pj.Id;
+            TempData["Nome"] = pj.Nome;
+            TempData["Cnpj"] = pj.Cnpj;
+            TempData["IE"] = pj.IE;
+
+            return RedirectToAction("Contact");
         }
     }
 }
