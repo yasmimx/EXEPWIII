@@ -81,5 +81,15 @@ namespace AppTerceira.Controllers
             Pessoa objPessoa = new Pessoa();
             return View(objPessoa);
         }
+
+        [HttpPost]
+        public ActionResult ConsultaPessoa(int Id, string Nome, char Sexo)
+        {
+            ViewBag.Id = Id;
+            ViewBag.Nome = Nome;
+            ViewBag.Sexo = Sexo;
+
+            return View();
+        }
     }
 }
